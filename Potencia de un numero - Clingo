@@ -1,0 +1,17 @@
+%Potencia de un numero en clingo
+%BUAP Ingenieria en Tecnologias de la informacion
+num(1..3).%predicado que asignara los valores a las variables dentro del rango
+%seleccionado, que va en este caso desde el 1 hasta el 3, pero puede ser cualquiera
+
+potencia(A,B,C) %Se comienza con el predicado con 3 variables,
+%La variable A es el valor al que se le aplicara la potencia
+%La variable B es la potencia
+%La variable C es donde se guardara el resultado de la potencia
+:-num(A),num(B),C=A**B.
+%Como mencione antes, el predicado num() le asigna un valor a las variables A y B
+%El ** de la operacion C=A**B significa potencia o pow en c++, el resultado de eso
+%Se guarda en C
+
+#show potencia/3.
+
+%#show se utiliza para mostrar los resultados del predicado que necesitamos
